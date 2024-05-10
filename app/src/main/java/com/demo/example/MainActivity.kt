@@ -7,7 +7,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.demo.example.Mvvm.UsersViewModel
 import com.demo.example.adapter.DataAdapter
-import com.demo.example.model.Users
+import com.demo.example.model.UserResponse
 import kotlinx.android.synthetic.main.activity_main.recycleView
 import kotlinx.android.synthetic.main.activity_main.saveBtn
 
@@ -15,7 +15,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var viewModal: UsersViewModel
     lateinit var dataAdapter: DataAdapter
 
-    val userList = mutableListOf<Users>()
+    val userList = mutableListOf<UserResponse>()
+
 
     public override fun onCreate(bundle: Bundle?) {
         super.onCreate(bundle)
@@ -32,13 +33,11 @@ class MainActivity : AppCompatActivity() {
         recycleView.adapter = dataAdapter
 
         saveBtn.setOnClickListener {
-            viewModal.addUsers(Users(saveBtn.text.toString()))
+//            viewModal.addUsers(UserResponse(saveBtn.text.toString()))
         }
         viewModal.allUsers.observe(this, Observer {
             it?.let {
-                userList.clear()
-                userList.addAll(it)
-                dataAdapter.notifyDataSetChanged()
+                dataAdapter.addItem(it)
             }
         })
     }

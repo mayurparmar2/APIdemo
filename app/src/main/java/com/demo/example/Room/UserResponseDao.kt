@@ -4,25 +4,25 @@ import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
-import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import com.demo.example.model.Users
+import com.demo.example.model.UserResponse
+
 
 @Dao
-interface UsersDao {
+interface UserResponseDao {
 
 //    @Insert(onConflict = OnConflictStrategy.IGNORE)
     @Insert()
-    suspend fun insert(mUsers: Users)
+    suspend fun insert(mUsers: UserResponse)
 
     @Delete
-    suspend fun delete(mUsers: Users)
+    suspend fun delete(mUsers: UserResponse)
 
-    @Query("Select * from Users")
-    fun getAllUsers(): LiveData<List<Users>>
+    @Query("Select * from UserResponse")
+    fun getAllUsers(): LiveData<List<UserResponse>>
 
     @Update
-    suspend fun update(mUsers: Users)
+    suspend fun update(mUsers: UserResponse)
 
 }
