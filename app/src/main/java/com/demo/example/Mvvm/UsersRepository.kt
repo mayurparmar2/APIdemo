@@ -1,23 +1,11 @@
 package com.demo.example.Mvvm
 
-import android.content.Context
-import android.content.Intent
-import android.content.SharedPreferences
-import android.provider.SyncStateContract.Constants
-import android.provider.SyncStateContract.Helpers
-import android.util.Log
-import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.LiveData
 import com.demo.example.Room.UserResponseDao
 import com.demo.example.model.RegisterRequest
-import com.demo.example.model.RegisterResult
 import com.demo.example.model.UserResponse
 import com.demo.example.network.ApiService
 import com.demo.example.network.RetrofitClient
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 
 class UsersRepository(private val mUsersDao: UserResponseDao) {

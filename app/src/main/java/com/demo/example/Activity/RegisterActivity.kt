@@ -11,10 +11,7 @@ import kotlinx.android.synthetic.main.activity_register.etEmail
 import kotlinx.android.synthetic.main.activity_register.etPassword
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
-import okhttp3.OkHttpClient
-import okhttp3.Request
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var viewModal: UsersViewModel

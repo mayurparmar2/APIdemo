@@ -2,14 +2,11 @@ package com.demo.example.network
 
 import com.demo.example.model.RegisterRequest
 import com.demo.example.model.RegisterResult
-import com.demo.example.model.User
 import com.demo.example.model.UserResponse
-import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
 
-import retrofit2.Callback;
 import retrofit2.http.Headers
 import retrofit2.Call
 

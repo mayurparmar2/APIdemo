@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.demo.example.R
 import com.demo.example.model.UserResponse
-import kotlinx.android.synthetic.main.data_item.view.tv_foldername
 
 class DataAdapter(private val context: Context, private val mUsers:  MutableList<UserResponse>, listener: OnUsersItemClick) : RecyclerView.Adapter<DataAdapter.ViewHolder>() {
     val onUsersItemClick: OnUsersItemClick = listener

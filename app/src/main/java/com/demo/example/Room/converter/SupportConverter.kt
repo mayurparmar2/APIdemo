@@ -1,5 +1,4 @@
 package com.demo.example.Room.converter
-
 import androidx.room.TypeConverter
 import com.demo.example.model.Support
 import com.google.gson.Gson

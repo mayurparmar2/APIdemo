@@ -27,8 +27,10 @@ class MainActivity : AppCompatActivity() {
                 ViewModelProvider.AndroidViewModelFactory.getInstance(application)
         ).get(UsersViewModel::class.java)
 
+
+
         dataAdapter = DataAdapter(application,userList, DataAdapter.OnUsersItemClick {
-            startActivity(Intent(this@MainActivity,ViewActivity::class.java))
+            startActivity(Intent(this@MainActivity, ViewActivity::class.java))
         })
         recycleView.adapter = dataAdapter
 
